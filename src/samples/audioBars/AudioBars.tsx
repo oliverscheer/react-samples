@@ -83,12 +83,12 @@ const AudioBars = (props: AudioBarsProps) => {
       }
     } else {
       for (let i = 0; i < arrayLength; i++) {
-        const index = (i * (n - 1)) / (arrayLength - 1);
+        const index = (i * (dataLength - 1)) / (arrayLength - 1);
         const low = Math.floor(index);
         const high = Math.ceil(index);
         const t = index - low;
-        if (high >= n) {
-          result[i] = data[n - 1];
+        if (high >= dataLength) {
+          result[i] = data[dataLength - 1];
         } else {
           result[i] = data[low] * (1 - t) + data[high] * t;
         }
