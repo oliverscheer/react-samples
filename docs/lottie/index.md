@@ -134,7 +134,7 @@ With the code example above, you can easily implement such a loading screen in y
 
 Lottie is a game-changing tool for developers looking to integrate high-quality animations into their projects. By leveraging vector-based JSON files and the flexibility of libraries like `lottie-react`, you can create stunning, performant, and interactive experiences for your users.
 
-### Key Takeaways:
+### Key Takeaways
 
 - Lottie animations are lightweight, scalable, and interactive.
 - They work seamlessly across web and mobile platforms.
@@ -144,6 +144,6 @@ Lottie is a game-changing tool for developers looking to integrate high-quality 
 
 Ready to take your web app to the next level? Start experimenting with Lottie animations today! Whether you're creating captivating loading screens, playful illustrations, or dynamic interactions, Lottie has the tools you need.
 
-Have questions or want to share your experience? Drop a comment below or explore more examples at [LottieFiles](https://lottiefiles.com/). 
+Have questions or want to share your experience? Drop a comment below or explore more examples at [LottieFiles](https://lottiefiles.com/).
 
 Happy coding! 🚀

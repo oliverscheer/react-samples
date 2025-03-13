@@ -234,6 +234,6 @@ If you're building an application that involves audio, consider adding a visuali
 
 ---
 
-## Your Turn!
+## Your Turn
 
 Have you created any audio visualizations in your projects? What challenges did you face? Share your experience in the comments below! And if you have ideas for improving the `AudioBars` component, I'd love to hear them. Happy coding! 🎵

@@ -4,7 +4,6 @@ import AudioBars from "./AudioBars";
 const AudioOverview = () => {
   const [audioData, setAudioData] = useState<Float32Array | null>(null);
 
-
   useEffect(() => {
     const getMicrophoneAccess = async () => {
       try {
@@ -37,6 +36,18 @@ const AudioOverview = () => {
 
   return (
     <>
+    <h1>Demo Mode</h1>
+    <AudioBars
+        color="red"
+        barSpacing={4}
+        barWidth={20}
+        data={audioData}
+        demoMode={true}
+        width={1200}
+        height={300}
+      />
+
+    <h1>Microphone</h1>
       <AudioBars
         color="red"
         barSpacing={4}

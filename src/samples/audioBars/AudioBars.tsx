@@ -35,9 +35,9 @@ const AudioBars = (props: AudioBarsProps) => {
   const dataMap = new WeakMap();
 
   const updateSampleData = () => {
-    console.log("updateSampleData: " + 10);
-        // const numberOfBars = numberOfBars ?? defaultNumberOfBars;
-        const data = new Float32Array(10).map(() => Math.random());
+    // console.log("updateSampleData: " + 10);
+        // const data = new Float32Array(10).map(() => Math.random() * -1 * 0.0000123);
+        const data = new Float32Array(10).map(() => -100 + Math.random() * 200);
         WavRenderer.drawBars(data);
       };
 
@@ -48,7 +48,10 @@ const AudioBars = (props: AudioBarsProps) => {
     memoize: boolean = false
   ) => {
     // console.log("normalizeArray", data);
-    let cache, mKey, dKey;
+    
+    let cache: unknown;
+    let mKey: unknown;
+    let dKey : unknown;
 
     if (memoize) {
       mKey = arrayLength.toString();
@@ -66,9 +69,8 @@ const AudioBars = (props: AudioBarsProps) => {
     if (arrayLength <= dataLength) {
       result.fill(0);
       const count = new Array(arrayLength).fill(0);
-      for (let i = 0; i < dataLength; i++) {
+      for (let i: number = 0; i < dataLength; i++) {
         const index = Math.floor(2*(i * arrayLength / dataLength));
-        console.log("newIndex: " + index);
         if (downsamplePeaks) {
           result[index] = Math.max(result[index], Math.abs(data[i]));
         } else {
@@ -123,8 +125,6 @@ const AudioBars = (props: AudioBarsProps) => {
          (canvasWidth - barSpacing) / (Math.max(barWidth, 1) + barSpacing));
       
       // const pointCount = 20
-      console.log("pointCount: " + pointCount);
-    console.log("dataLength" + data.length);
       const points = normalizeArray(data, pointCount, true);
       const totalBarsWidth = pointCount * barWidth;
       const totalSpacingWidth = (pointCount - 1) * barSpacing;
