@@ -5,6 +5,7 @@ import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import LottieOverview from "./samples/lottie/LottieOverview";
 import AudioOverview from "./samples/audioBars/AudioOverview";
+import TailwindTest from "./samples/tailwind/tailwindtest";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/about" element={<About />} />
       <Route path="/audiobars" element={<AudioOverview />} />
       <Route path="/lottie" element={<LottieOverview />} />
+      <Route path="/tailwind" element={<TailwindTest />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
     </>
